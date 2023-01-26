@@ -6,14 +6,16 @@ fetch(url)
 .then(response => response.json())
 .then(data => {
     data.forEach(cart => {
-        console.info(cart.spanishName)
-        const p = document.createElement('p')
-        p.setAttribute('id', cart.id)
-        p.innerHTML = cart.spanishName
-        p.addEventListener('click', function() {
+        
+        // const cardsReverse = document.createElement('img')
+        const cardsReverse = new Image();
+        cardsReverse.src = cart.cardsReverse.sakuraReverse
+        cardsReverse.setAttribute('id', cart.id)
+        // p.innerHTML = cart.cardsReverse.sakuraReverse
+        cardsReverse.addEventListener('click', function() {
             window.location.href = `./pastCard.html?id=${cart.id}`
         })        
-        aplicacion.appendChild(p)
+        aplicacion.appendChild(cardsReverse)
     });
     console.info(data)
 })
