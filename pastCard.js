@@ -15,9 +15,8 @@ fetch(`${url}/${id}`)
     spanishName.innerHTML = data.spanishName   
     meaning.innerHTML = data.meaning
 
-    const sakuraCard = document.createElement('img')
-    sakuraCard.innerHTML = data.sakuraCard
-    const sakuraCard = new Image(100, 50);
+    const sakuraCard = new Image();
+    sakuraCard.src = data.sakuraCard;
 
     aplicacion.appendChild(spanishName)
     aplicacion.appendChild(meaning)
