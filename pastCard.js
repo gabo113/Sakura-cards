@@ -2,9 +2,7 @@ const aplicacion = document.querySelector('.container')
 
 const getUrl = new URLSearchParams(window.location.search)
 id = getUrl.get('id')
-// console.info(id)
 const url = "https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/"
-// console.info(`${url}/${id}`)
 
 fetch(`${url}/${id}`)
 .then(response => response.json())
