@@ -3,20 +3,19 @@ import { allCards } from '../functions/functions'
 
 const CardsIndex = () => {
   const [cards, setCards] = useState(null)
-  
+    
   useEffect(() => {
     allCards(setCards)
-  },[])  
+  },[])    
 
   const shuffle = () => {
-    const shakingCards = cards.sort(() => Math.random() - 0.5)   
-
-    console.log(shakingCards);   
+    const shakingCards = cards.sort(() => Math.random() - 0.5)
+    console.log(shakingCards)    
   }
 
   const shotme = () => {
     const threeCards = cards.filter((card, index) => index < 3)
-    console.log (threeCards)
+    console.log(threeCards)
   }  
 
   return (
@@ -27,13 +26,14 @@ const CardsIndex = () => {
             <img src={Cards.cardsReverse.sakuraReverse} className='rounded float-start' height={100} width={75} alt="" />           
           </div>
         ))
-      ) : ('no hay cartas')} 
-      <div className='buttons'> 
-      <button onClick={() => {shuffle() }}>Shuffle</button>      
-      <button onClick={()=>{shotme()}}>Shot me</button>
-      </div>
-    </div>
+      ) : ('no hay cartas')}
 
+      <div className='buttons'> 
+        <button onClick={() => {shuffle()}}>Shuffle</button>      
+        <button onClick={() => {shotme()}}>Shot me</button>
+      </div>  
+      
+    </div>
   )
 }
 

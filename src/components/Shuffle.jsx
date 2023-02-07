@@ -1,15 +1,14 @@
 import React from 'react'
 
-const Shuffle = ({cards}) => {
+const Shuffle = () => {     
   
-  
-  // const pastCard = threeCards.filter((card, index) => index % 3 === 0)
-  // const presentCard = threeCards.filter((card, index) => index % 3 === 0)
-  // const futureCard = threeCards.filter((card, index) => index % 3 === 0)
-
+  const pastCard = this.threeCards.filter((card, index) => index % 3 === 0)
+  const presentCard = this.threeCards.filter((card, index) => index % 3 === 0)
+  const futureCard = this.threeCards.filter((card, index) => index % 3 === 0)
+ 
   return (
-    <div>
-      {/* <div>
+    <div>      
+      <div>
         {pastCard.map((cardpa) => (
           <div key={cardpa.id}>
             <p>Card of the Past</p>
@@ -35,7 +34,7 @@ const Shuffle = ({cards}) => {
           </div>
         ))}      
 
-      </div>       */}
+      </div>      
     </div>
   )
 }
